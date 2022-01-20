@@ -1,0 +1,18 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+<hr>
+
+<!--ngSubmit Evento de angular previenen el refresh de navegador -->
+<form (ngSubmit)="agregar()">
+
+    <input type="text" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre" />
+    <input type="number" placeholder="Poder" name="poder" [(ngModel)]='nuevo.poder' />
+
+    <!-- El parentesis recto establece propiedad al objeto-->
+    <!-- [value]='nuevo.nombre'
+            (input)=" cambiarNombre($event) -->
+    <!-- El evento input es cuando cambia el valor y se manda el evento al cambiar nombre -->
+
+    <button type="submit">
+        Agregar
+    </button>
+</form>
